@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Website</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+</head>
+
+<body>
+    
+    <!-- Header Section -->
+    <header id = 'portfolio-header'>
+        <img src="static/images/profile.png" alt="Logo" id="logo">
+        <nav id="icon-containar-nav">
+            <img src="static/images/bottem-removebg-preview.png" alt="Logo" id="bottem_logo">
+            <ul id="menu_icons">
+                <i title='Home' onclick="applySelectedColor(this.id);" class="fa-solid fa-house" id="fa-solid_fa-house"></i>
+                <i title='About' onclick="applySelectedColor(this.id);" class="fa-solid fa-user" id="fa-solid_fa-user"></i>
+                <i title='Contact' onclick="applySelectedColor(this.id);" class="fas fa-phone" id="fas_fa-phone"></i>
+            </ul>
+        </nav>
+
+        <nav>
+            <ul>
+                <li onclick="applySelectedColor(this);"><a class="active"><i class="fa-solid fa-house" name='fa-solid_fa-house'></i> &nbsp;Home</a></li>
+                <li onclick="applySelectedColor(this);"><a> <i class="fa-solid fa-user" name='fa-solid_fa-user'></i> &nbsp;About</a></li>
+                <li onclick="applySelectedColor(this);"><a><i class="fas fa-phone" name="fas_fa-phone"></i> &nbsp;Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div id="fa-solid_fa-house_container">
+            <img src="static\images\cover_c_2_4.png" id="pushparaj_developer_cover">
+            <h1 id="pushparaj">Pushparaj M</h1>
+            <h1 id="fullstack">Full-Stack Developer</h1>
+            <h1 id="mobile_no" name="onhover_same" onclick="copyToClipboard()">
+                <i class="fa-solid fa-phone"></i> +91 9080209633
+            </h1>
+            <h1 id="email_id" name="onhover_same" onclick="window.location.href='mailto:pushparaj-fullstack-dev@outlook.com';">
+                <i class="fa-solid fa-envelope"></i>&nbsp;pushparaj-fullstack-dev@outlook.com
+            </h1>
+
+            
+            <section id="banner">
+                <h1>Welcome to My Website</h1>
+                <p>This is a simple static website built with HTML and CSS.</p>
+                <a href="about.html" class="btn">Learn More</a>
+            </section>
+
+            <section id="gallery">
+                <h2>Gallery</h2>
+                <img src="static/images/logo.jpg" alt="Sample Image 1">
+                <img src="static/images/logo2.jpg" alt="Sample Image 2">
+                <img src="static/images/logo3.jpg" alt="Sample Image 3">
+            </section>
+
+            <li id="scroll-to-top" onclick="applySelectedColor(this);"><a><i class="fa-solid fa-house" name='fa-solid_fa-house'></i>
+            &nbsp;Home</a></li>
+
+
+            <section id="services">
+                <h2>Our Services</h2>
+                <div class="service">
+                    <h3>Web Design</h3>
+                    <p>Creating aesthetically pleasing and user-friendly websites.</p>
+                </div>
+                <div class="service">
+                    <h3>SEO Optimization</h3>
+                    <p>Improving your website's visibility on search engines.</p>
+                </div>
+                <div class="service">
+                    <h3>Content Creation</h3>
+                    <p>Producing engaging content for your audience.</p>
+                </div>
+            </section>
+
+        </div>
+
+        <div id="fa-solid_fa-user_container" hidden>
+            <div class="resume-container">
+                <div class="header">
+                    <p class="name">DIVYADHARSHINI KUMARAGURU</p>
+                    <p class="contact-info">
+                        Hyderabad, India • divyadharshini.k1406@gmail.com • +91 93423 43371<br>
+                        <a href="https://www.linkedin.com/in/divyadharshini-k-760089267/">LinkedIn Profile</a>
+                    </p>
+                </div>
+            
+                <div class="professional-experience">
+                    <p class="section-title">PROFESSIONAL EXPERIENCE</p>
+                    <div class="section-content">
+                        <p><strong>COGNIZANT TECHNOLOGY SOLUTIONS</strong> Hyderabad, India</p>
+                        <p><em>Programmer Analyst</em> 07/2022 - Present</p>
+                        <ul>
+                            <li>Contributed to 2 essential projects for Singapore Press Holdings (SPH Media) and Cambridge
+                                University Press and Assessment (CUPA).</li>
+                            <li>Spearheaded the creation of automation test cases, boosting efficiency by 60% and reducing testing
+                                time by 30%.</li>
+                            <li>Designed and developed 100+ test cases for API testing using Postman, reducing bug reports by 40%.
+                            </li>
+                            <li>Mentored 2 interns, improving team efficiency and integration.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="education">
+                    <p class="section-title">EDUCATION</p>
+                    <div class="section-content">
+                        <p><strong>BANNARI AMMAN INSTITUTE OF TECHNOLOGY, SATHYAMANGALAM</strong> Tamil Nadu, India</p>
+                        <p><em>Bachelor of Engineering; Major in Aeronautical</em> 08/2018 - 06/2022</p>
+                        <ul>
+                            <li>Secured 2nd place in the SAE India 5th Aero design challenge (2020).</li>
+                            <li>Won 1st place in the National IAAA Aircraft Build Competition (2019).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        </div>
+        
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My Static Website. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="static/js/scripts.js"></script>
+</body>
+
+</html>
