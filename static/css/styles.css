@@ -55,7 +55,6 @@ button:hover, i:hover, #mobile_no:hover, #email_id:hover{
 }
 
 #pushparaj_developer_cover{
-    /* margin-top: 0px; */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -109,7 +108,6 @@ footer {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 10px 0px 10px 0px;
-    cursor: pointer;
 }
 
 .card:hover {
@@ -126,6 +124,8 @@ footer {
     font-weight: bold;
     font-size: 24px;
     text-align: left;
+    border-bottom: 2px solid #0066ff;
+    cursor: pointer;
 }
 
 p, li{
@@ -209,9 +209,17 @@ p, li{
     margin-left: 43px;
 }
 
-.per{
+.per {
     width: 10%;
     margin-bottom: 50px;
+    border-radius: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, width 0.3s ease;
+}
+
+.per:hover {
+    width: 11%;
+    box-shadow: 0 8px 16px rgba(73, 70, 70, 0.4);
 }
 
 .study_location{
@@ -224,4 +232,51 @@ p, li{
     font-weight: bold;
     color: #1d1c1c;
     text-align: center;
+}
+
+.split-screen {
+    display: flex;
+    height: 45vh;
+}
+
+.right-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 550px;
+}
+
+.left-section {
+    margin-top: -25px;
+}
+
+.right-section .row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    margin: 10px;
+}
+
+.image-style {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.image-style:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+.skills_card{
+    height: 1460px;
 }

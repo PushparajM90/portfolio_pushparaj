@@ -112,10 +112,10 @@
 
             <div class="container mt-5 bottem_content">
                 <!-- Profile Section -->
-                <div class="card" onclick="openParagraph(this);">
+                <div class="card">
                     <div class="row text-center">
                         <div class="col-md-12">
-                            <p id="p_profile">Profile</p>
+                            <p id="p_profile" onclick="openParagraph(this);" >Profile</p>
                             <div class="is_hidden_false" name="find_hidden">
                                 <p id="about_me">
                                     A highly motivated IT professional with over one and a half years of
@@ -132,10 +132,10 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="openParagraph(this);">
+                <div class="card">
                     <div class="row text-center">
                         <div class="col-md-12">
-                            <p id="p_work_experience">Work Experience</p>
+                            <p id="p_work_experience" onclick="openParagraph(this);">Work Experience</p>
                             <div class="is_hidden_false" name="find_hidden">
                                 
                                 <div>
@@ -184,10 +184,10 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="openParagraph(this);">
+                <div class="card">
                     <div class="row text-center">
                         <div class="col-md-12">
-                            <p id="p_projects">Projects</p>
+                            <p id="p_projects" onclick="openParagraph(this);">Projects</p>
                             <div class="is_hidden_false" name="find_hidden">
                                 <div class="segrigate">
                                     <ul>
@@ -216,102 +216,266 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="openParagraph(this);">
+                <div class="card">
                     <div class="row text-center">
                         <div class="col-md-12">
-                            <p id="p_skills">Skills</p>
-                            <div class="is_hidden_false" name="find_hidden">
+                            <p id="p_skills" onclick="openParagraph(this);">Skills</p>
+                            <div class="is_hidden_false skills_card" name="find_hidden">
                                 <p class="p_technical_skills">Technical Skills</p>
-                                <p class="p_back_end">Back-End</p>
-                                <ul class="class_p_skills">
-                                    <li> 
-                                        <i class="fa-brands fa-python"></i> &nbsp;&nbsp; Python
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-brands fa-aws"></i> &nbsp; Amazon AWS
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-regular fa-file-code"></i> &nbsp;&nbsp; Django
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-solid fa-database"></i> &nbsp;&nbsp; PostgreSQL
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-solid fa-network-wired"></i> &nbsp; Python APIs
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-solid fa-code-branch"></i> &nbsp;&nbsp; Git
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-brands fa-java"></i> &nbsp;&nbsp; Java
-                                    </li>
-                                </ul>
+                                
+                                <div class="split-screen">
+                                    <!-- Left Section -->
+                                    <div class="left-section">
+                                        <p class="p_back_end">Back-End</p>
+                                        <ul class="class_p_skills">
+                                            <li>
+                                                <i class="fa-brands fa-python"></i> &nbsp;&nbsp; Python
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-brands fa-aws"></i> &nbsp; Amazon AWS
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-regular fa-file-code"></i> &nbsp;&nbsp; Django
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-solid fa-database"></i> &nbsp;&nbsp; PostgreSQL
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-solid fa-network-wired"></i> &nbsp; Python APIs
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-solid fa-code-branch"></i> &nbsp;&nbsp; Vertion Control
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-brands fa-java"></i> &nbsp;&nbsp; Java
+                                            </li>
+                                        </ul>
                                         
-                                <p class="p_front_end">Front-End</p>
-                                    
-                                <ul class="class_p_skills">
-                                    <li>
-                                        <i class="fa-brands fa-js"></i> &nbsp; JavaScript
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-solid fa-clipboard-list"></i> &nbsp;&nbsp; jQuery
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-solid fa-circle-half-stroke"></i> &nbsp; Materialize Theme
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-brands fa-bootstrap"></i> &nbsp; Bootstrap
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-brands fa-html5"></i> &nbsp;&nbsp; HTML
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <i class="fa-brands fa-css3-alt"></i> &nbsp;&nbsp; CSS
-                                    </li>
-                                </ul>
+                                        <p class="p_front_end">Front-End</p>
+                                        
+                                        <ul class="class_p_skills">
+                                            <li>
+                                                <i class="fa-brands fa-js"></i> &nbsp; JavaScript
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-solid fa-clipboard-list"></i> &nbsp;&nbsp; jQuery
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-solid fa-circle-half-stroke"></i> &nbsp; Materialize Theme
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-brands fa-bootstrap"></i> &nbsp; Bootstrap
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-brands fa-html5"></i> &nbsp;&nbsp; HTML
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-brands fa-css3-alt"></i> &nbsp;&nbsp; CSS
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <i class="fa-solid fa-chart-pie"></i> &nbsp;&nbsp; AM Charts
+                                            </li>
+                                            
+                                        </ul>
 
-                                <p class="p_tools_sofware">Tools/Sofware</p>
-                                <ul class="normal_list">
-                                    <li> &nbsp;&nbsp; VS codes</li><br>
-                                    <li> &nbsp;&nbsp; Atoms</li><br>
-                                    <li> &nbsp;&nbsp; PyCharm</li><br>
-                                    <li> &nbsp;&nbsp; Eclipse</li><br>
-                                </ul>
+                                        <p class="p_tools_sofware">Tools/Sofware</p>
+                                        <ul class="normal_list">
+                                            <li> &nbsp;&nbsp; VS codes</li><br>
+                                            <li> &nbsp;&nbsp; Atoms Editor</li><br>
+                                            <li> &nbsp;&nbsp; PyCharm</li><br>
+                                            <li> &nbsp;&nbsp; Eclipse</li><br>
+                                        </ul>
+                                        
+                                        <p class="p_soft_skills">Soft Skills</p>
+                                        <ul class="normal_list">
+                                            <li> &nbsp;&nbsp; Team Player</li><br>
+                                            <li> &nbsp;&nbsp; Action Planning</li><br>
+                                            <li> &nbsp;&nbsp; Documentation Designing</li><br>
+                                            <li> &nbsp;&nbsp; Project Management</li><br>
+                                            <li> &nbsp;&nbsp; Customer Experience</li><br>
+                                        </ul>
+                                        <p class="p_languages">Languages</p>
+                                        <ul class="normal_list">
+                                            <li> &nbsp;&nbsp; English (Fluent)</li><br>
+                                            <li> &nbsp;&nbsp; Tamil (Fluent)</li><br>
+                                        </ul>
+                                    </div>
 
-                                <p class="p_soft_skills">Soft Skills</p>
-                                <ul class="normal_list">
-                                    <li> &nbsp;&nbsp; Team Player</li><br>
-                                    <li> &nbsp;&nbsp; Action Planning</li><br>
-                                    <li> &nbsp;&nbsp; Documentation Designing</li><br>
-                                    <li> &nbsp;&nbsp; Project Management</li><br>
-                                    <li> &nbsp;&nbsp; Customer Experience</li><br>
-                                </ul>
-                                <p class="p_languages">Languages</p>
-                                <ul class="normal_list">
-                                    <li> &nbsp;&nbsp; English (Fluent)</li><br>
-                                    <li> &nbsp;&nbsp; Tamil (Fluent)</li><br>
-                                </ul> 
+                                    <div class="right-section">
+                                        <section class="image-section">
+                                            <div class="row center">
+                                                <div class="col-md-4">
+                                                    <a href="https://www.python.org/" title="Python" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/python_img.png" alt="Image 1" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="https://aws.amazon.com/free/?gclid=Cj0KCQjwi5q3BhCiARIsAJCfuZldJgwb8G-LV1Ov5gfI6V0kN67R7wXofs0osVdOMoUxApRF0gK8_5waAhNxEALw_wcB&trk=14a4002d-4936-4343-8211-b5a150ca592b&sc_channel=ps&ef_id=Cj0KCQjwi5q3BhCiARIsAJCfuZldJgwb8G-LV1Ov5gfI6V0kN67R7wXofs0osVdOMoUxApRF0gK8_5waAhNxEALw_wcB:G:s&s_kwcid=AL!4422!3!453325184782!e!!g!!aws!10712784856!111477279771&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all" title="Amazon AWS" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/aws.png" alt="Image 2" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="https://www.djangoproject.com/" title="Django" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/dj.png" alt="Image 3" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="row center">
+                                                <div class="col-md-4">
+                                                    <a href="https://www.postgresql.org/" title="Postgresql" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/p_sql.png" alt="Image 4" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="https://www.geeksforgeeks.org/python-api-tutorial-getting-started-with-apis/" title="Python APIs" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/API.png" alt="Image 5" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="https://bitbucket.org/product/" title="Bitbucket" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/bit.png" alt="Image 6" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="row center">
+                                                <div class="col-md-4">
+                                                    <a href="https://www.java.com/en/" title="Java" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/java.png" alt="Image 7" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <a href="https://www.w3schools.com/js/" title="JavaScript" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/js.png" alt="Image 8" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <a href="https://jquery.com/" title="Jquery" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/jq.png" alt="Image 9" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="row center">
+                                                <div class="col-md-4">
+                                                    
+                                                    <a href="https://materializecss.com/themes.html" title="Materialize Theme" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/Materialize.png" alt="Image 10" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    
+                                                    <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" title="Bootstrap" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/Bootstrap.png" alt="Image 11" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="https://www.w3schools.com/html/" title="HTML" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/html.png" alt="Image 12" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="row center">
+                                                <div class="col-md-4">
+                                                    <a href="https://www.w3schools.com/css/default.asp" title="CSS" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/css.png" alt="Image 13" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="https://www.amcharts.com/" title="AM Charts" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/am.png" alt="Image 14" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="https://code.visualstudio.com/" title="VS codes" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/vs.png" alt="Image 15" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="row center">
+                                                <div class="col-md-4">
+                                                    <a href="https://atom-editor.cc/" title="Atoms Editor" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/atoms.png" alt="Image 16" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="https://www.jetbrains.com/pycharm/" title="PyCharm" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/pyc.png" alt="Image 17" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <a href="https://www.eclipse.org/" title="Eclipse" target="_blank">
+                                                        <div class="image-container">
+                                                            <img src="static/images/eclipse.png" alt="Image 18" class="image-style">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                        </section>
+                                    </div>
+                                </div>
                                         
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card" onclick="openParagraph(this);">
+                <div class="card">
                     <div class="row text-center">
                         <div class="col-md-12">
-                            <p id="p_educational_background">Educational Background</p>
+                            <p id="p_educational_background" onclick="openParagraph(this);">Educational Background</p>
                             <div class="is_hidden_false" name="find_hidden">
 
                                 <div>
@@ -335,14 +499,6 @@
                                     <img src="static\images\82_per.png" class="per">
 
                                 </div>
-                             
-                            
-                            
-
-
-                             
-                            
-                            
                             </div>
                         </div>
                     </div>

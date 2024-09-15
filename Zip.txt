@@ -11,3 +11,4 @@ profile -> experiance -> project -> stils -> Education
 
 6.Skills images.
 
+7. AM Charts integration

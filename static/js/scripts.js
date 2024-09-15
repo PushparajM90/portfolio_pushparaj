@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function openParagraph(element) {
     console.log(element);
-    var div = element.querySelector('[name="find_hidden"]');
+    var div = element.nextElementSibling;
     console.log("div--->", div);
     if (div) {
         var classList = div.classList;
