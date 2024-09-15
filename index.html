@@ -4,141 +4,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Website</title>
+    <title>Pushparaj Portfolio</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
+    <!-- AM Charts
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script> -->
 </head>
 
 <body>
-    
-    <!-- Header Section -->
-    <header id = 'portfolio-header'>
-        <img src="static/images/profile.png" alt="Logo" id="logo">
-        <nav id="icon-containar-nav">
-            <img src="static/images/bottem-removebg-preview.png" alt="Logo" id="bottem_logo">
-            <ul id="menu_icons">
-                <i title='Home' onclick="applySelectedColor(this.id);" class="fa-solid fa-house" id="fa-solid_fa-house"></i>
-                <i title='About' onclick="applySelectedColor(this.id);" class="fa-solid fa-user" id="fa-solid_fa-user"></i>
-                <i title='Contact' onclick="applySelectedColor(this.id);" class="fas fa-phone" id="fas_fa-phone"></i>
-            </ul>
-        </nav>
+    <div class="row all_div-container">
+        <!-- <header id='portfolio-header' class="center">
+            <div class="row">
+                <div class="col s12 header_class_div">
 
-        <nav>
-            <ul>
-                <li onclick="applySelectedColor(this);"><a class="active"><i class="fa-solid fa-house" name='fa-solid_fa-house'></i> &nbsp;Home</a></li>
-                <li onclick="applySelectedColor(this);"><a> <i class="fa-solid fa-user" name='fa-solid_fa-user'></i> &nbsp;About</a></li>
-                <li onclick="applySelectedColor(this);"><a><i class="fas fa-phone" name="fas_fa-phone"></i> &nbsp;Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
 
-    <main>
-        
-        <div id="fa-solid_fa-house_container">
+                    <nav id="header_nav">
+                        <div class="row" style="margin-top: 12px;">
+                            <div class="col-md-4" id="header_button_nav">
+                                <button type="button" class="btn btn-default fw-bold" onclick="applySelectedColor(this);">
+                                    <i class="fa-solid fa-house" name='fa-solid_fa-house'></i> &nbsp;Home
+                                </button>
+
+                                <button type="button" class="btn btn-default fw-bold" onclick="applySelectedColor(this);">
+                                    <i class="fa-solid fa-user" name='fa-solid_fa-user'></i>&nbsp;About
+                                </button>
+
+                                <button type="button" class="btn btn-default fw-bold" onclick="applySelectedColor(this);">
+                                    <i class="fas fa-phone" name="fas_fa-phone"></i>&nbsp;Contact
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 12px;">
+                            <div class="col-md-2">
+                                <span id='fa_class_li_list'>
+                                    <i class="fa-solid fa-house" name='fa-solid_fa-house'></i>
+                                    <i class="fa-solid fa-user" name='fa-solid_fa-user'></i>
+                                    <i class="fas fa-phone" name="fas_fa-phone"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </header> -->
+        <main>
+
             <img src="static\images\cover_c_2_4.png" id="pushparaj_developer_cover">
-            <h1 id="pushparaj">Pushparaj M</h1>
-            <h1 id="fullstack">Full-Stack Developer</h1>
-            <h1 id="mobile_no" name="onhover_same" onclick="copyToClipboard()">
-                <i class="fa-solid fa-phone"></i> +91 9080209633
-            </h1>
-            <h1 id="email_id" name="onhover_same" onclick="window.location.href='mailto:pushparaj-fullstack-dev@outlook.com';">
-                <i class="fa-solid fa-envelope"></i>&nbsp;pushparaj-fullstack-dev@outlook.com
-            </h1>
 
-            
-            <section id="banner">
-                <h1>Welcome to My Website</h1>
-                <p>This is a simple static website built with HTML and CSS.</p>
-                <a href="about.html" class="btn">Learn More</a>
-            </section>
-
-            <section id="gallery">
-                <h2>Gallery</h2>
-                <img src="static/images/logo.jpg" alt="Sample Image 1">
-                <img src="static/images/logo2.jpg" alt="Sample Image 2">
-                <img src="static/images/logo3.jpg" alt="Sample Image 3">
-            </section>
-
-            <li id="scroll-to-top" onclick="applySelectedColor(this);"><a><i class="fa-solid fa-house" name='fa-solid_fa-house'></i>
-            &nbsp;Home</a></li>
-
-
-            <section id="services">
-                <h2>Our Services</h2>
-                <div class="service">
-                    <h3>Web Design</h3>
-                    <p>Creating aesthetically pleasing and user-friendly websites.</p>
-                </div>
-                <div class="service">
-                    <h3>SEO Optimization</h3>
-                    <p>Improving your website's visibility on search engines.</p>
-                </div>
-                <div class="service">
-                    <h3>Content Creation</h3>
-                    <p>Producing engaging content for your audience.</p>
-                </div>
-            </section>
-
-        </div>
-
-        <div id="fa-solid_fa-user_container" hidden>
-            <div class="resume-container">
-                <div class="header">
-                    <p class="name">DIVYADHARSHINI KUMARAGURU</p>
-                    <p class="contact-info">
-                        Hyderabad, India • divyadharshini.k1406@gmail.com • +91 93423 43371<br>
-                        <a href="https://www.linkedin.com/in/divyadharshini-k-760089267/">LinkedIn Profile</a>
-                    </p>
-                </div>
-            
-                <div class="professional-experience">
-                    <p class="section-title">PROFESSIONAL EXPERIENCE</p>
-                    <div class="section-content">
-                        <p><strong>COGNIZANT TECHNOLOGY SOLUTIONS</strong> Hyderabad, India</p>
-                        <p><em>Programmer Analyst</em> 07/2022 - Present</p>
-                        <ul>
-                            <li>Contributed to 2 essential projects for Singapore Press Holdings (SPH Media) and Cambridge
-                                University Press and Assessment (CUPA).</li>
-                            <li>Spearheaded the creation of automation test cases, boosting efficiency by 60% and reducing testing
-                                time by 30%.</li>
-                            <li>Designed and developed 100+ test cases for API testing using Postman, reducing bug reports by 40%.
-                            </li>
-                            <li>Mentored 2 interns, improving team efficiency and integration.</li>
-                        </ul>
+            <div class="row" id="detail_containar">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <h4 id="pushparaj">
+                            Pushparaj M
+                        </h4>
                     </div>
                 </div>
-            
-                <div class="education">
-                    <p class="section-title">EDUCATION</p>
-                    <div class="section-content">
-                        <p><strong>BANNARI AMMAN INSTITUTE OF TECHNOLOGY, SATHYAMANGALAM</strong> Tamil Nadu, India</p>
-                        <p><em>Bachelor of Engineering; Major in Aeronautical</em> 08/2018 - 06/2022</p>
-                        <ul>
-                            <li>Secured 2nd place in the SAE India 5th Aero design challenge (2020).</li>
-                            <li>Won 1st place in the National IAAA Aircraft Build Competition (2019).</li>
-                        </ul>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <h4 id="fullstack">
+                            Full-Stack Developer
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <h4 id="mobile_no" onclick="copyToClipboard()">
+                            <i class="fa-solid fa-phone"></i> +91 9080209633
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <h4 id="email_id" onclick="window.location.href='mailto:pushparaj-fullstack-dev@outlook.com';">
+                            <i class="fa-solid fa-envelope"></i>&nbsp;pushparaj-fullstack-dev@outlook.com
+                        </h4>
                     </div>
                 </div>
             </div>
-        </div>
 
-        
-        
-        </div>
-        
-    </main>
+            <div class="container mt-5 bottem_content">
+                <!-- Profile Section -->
+                <div class="card" onclick="openParagraph(this);">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <p id="p_profile">Profile</p>
+                            <div class="is_hidden_false" name="find_hidden">
+                                <p id="about_me">
+                                    A highly motivated IT professional with over one and a half years of
+                                    experience in IT infrastructure and providing comprehensive technical
+                                    support. Proven expertise in troubleshooting and resolving software
+                                    issues, with a focus on optimizing code performance. Adept at
+                                    collaborating with cross-functional teams to integrate and implement new
+                                    technologies. Seeking a challenging software developer role to apply my
+                                    technical skills in coding, problem-solving, and innovative solutions,
+                                    contributing to the success of a forward-thinking organization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 My Static Website. All rights reserved.</p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+                <div class="card" onclick="openParagraph(this);">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <p id="p_work_experience">Work Experience</p>
+                            <div class="is_hidden_false" name="find_hidden">
+                                
+                                <div>
+                                    <p class="duration">July 2023 - 2024 (Present)</p>
+                                    <p class="role">Full-Stack Developer at Datacorp Traffic Private Limited.</p>
+                                    <p class="location">- Bangalore, Karnataka</p>
+                                </div>
+
+                                <div class="segrigate">
+                                    <ul>
+                                        <li>Proficient in full-stack development using Django, Python, JavaScript,
+                                            HTML, CSS, and APIs to build and maintain dynamic, data-driven web
+                                            applications.</li>
+                                        <li>Developed and deployed full-stack applications, processing and
+                                            analyzing large data sets, and creating visually engaging data
+                                            visualizations, resulting in improved user engagement and decision-making.</li>
+                                        <li>Designed responsive, user-friendly interfaces that enhanced user
+                                            interaction and optimized application efficiency, improving operational
+                                            performance.</li>
+                                        <li>Collaborated effectively within cross-functional teams to troubleshoot
+                                            and resolve technical issues, ensuring timely project delivery and
+                                            smooth functionality.</li>
+                                        <li>Continuously improved development skills by staying up to date with
+                                            industry trends and best practices, contributing to the adoption of
+                                            modern tools and frameworks.</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <p class="duration">Feb 2023 - Jun 2023</p>
+                                    <p class="role">Software Intern at Datacorp Traffic Private Limited.</p>
+                                    <p class="location">- Bangalore, Karnataka</p>
+                                </div>
+                                
+                                <div class="segrigate">
+                                    <ul>
+                                        <li>Assisted in the preparation of financial statements, ensuring accuracy
+                                        and compliance.</li>
+                                        <li>Conducted internal audits, identifying and rectifying discrepancies in
+                                        financial records.</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openParagraph(this);">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <p id="p_projects">Projects</p>
+                            <div class="is_hidden_false" name="find_hidden">
+                                <div class="segrigate">
+                                    <ul>
+                                        <li>Developed and currently maintaining a tool to calculate employee
+                                        performance using various trackers and factor values, improving the
+                                        accuracy of performance metrics.</li>
+                                        <li>Designed and implemented a data migration tool that securely
+                                        transfers data from a public server to a local server, ensuring data
+                                        integrity and seamless transition during migration.</li>
+                                        <li>Created a dynamic tool for generating household questionnaires and
+                                        developed an API that delivers the questions to mobile applications,
+                                        enhancing survey distribution efficiency.</li>
+                                        <li>Built a comprehensive tool to monitor footage status and calculate
+                                        required manpower, optimizing resource allocation and project
+                                        timelines for job completion.</li>
+                                        <li>Migrated existing data visualizations to AM Charts, improving user
+                                        interaction and data presentation, resulting in more intuitive insights
+                                        for users.</li>
+                                        <li>Developed a calculator to estimate manpower and costs for job
+                                        completion, providing accurate cost assessments and supporting
+                                        better project planning.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openParagraph(this);">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <p id="p_skills">Skills</p>
+                            <div class="is_hidden_false" name="find_hidden">
+                                <p class="p_technical_skills">Technical Skills</p>
+                                <p class="p_back_end">Back-End</p>
+                                <ul class="class_p_skills">
+                                    <li> 
+                                        <i class="fa-brands fa-python"></i> &nbsp;&nbsp; Python
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-brands fa-aws"></i> &nbsp; Amazon AWS
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-regular fa-file-code"></i> &nbsp;&nbsp; Django
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-solid fa-database"></i> &nbsp;&nbsp; PostgreSQL
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-solid fa-network-wired"></i> &nbsp; Python APIs
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-solid fa-code-branch"></i> &nbsp;&nbsp; Git
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-brands fa-java"></i> &nbsp;&nbsp; Java
+                                    </li>
+                                </ul>
+                                        
+                                <p class="p_front_end">Front-End</p>
+                                    
+                                <ul class="class_p_skills">
+                                    <li>
+                                        <i class="fa-brands fa-js"></i> &nbsp; JavaScript
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-solid fa-clipboard-list"></i> &nbsp;&nbsp; jQuery
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-solid fa-circle-half-stroke"></i> &nbsp; Materialize Theme
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-brands fa-bootstrap"></i> &nbsp; Bootstrap
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-brands fa-html5"></i> &nbsp;&nbsp; HTML
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <i class="fa-brands fa-css3-alt"></i> &nbsp;&nbsp; CSS
+                                    </li>
+                                </ul>
+
+                                <p class="p_tools_sofware">Tools/Sofware</p>
+                                <ul class="normal_list">
+                                    <li> &nbsp;&nbsp; VS codes</li><br>
+                                    <li> &nbsp;&nbsp; Atoms</li><br>
+                                    <li> &nbsp;&nbsp; PyCharm</li><br>
+                                    <li> &nbsp;&nbsp; Eclipse</li><br>
+                                </ul>
+
+                                <p class="p_soft_skills">Soft Skills</p>
+                                <ul class="normal_list">
+                                    <li> &nbsp;&nbsp; Team Player</li><br>
+                                    <li> &nbsp;&nbsp; Action Planning</li><br>
+                                    <li> &nbsp;&nbsp; Documentation Designing</li><br>
+                                    <li> &nbsp;&nbsp; Project Management</li><br>
+                                    <li> &nbsp;&nbsp; Customer Experience</li><br>
+                                </ul>
+                                <p class="p_languages">Languages</p>
+                                <ul class="normal_list">
+                                    <li> &nbsp;&nbsp; English (Fluent)</li><br>
+                                    <li> &nbsp;&nbsp; Tamil (Fluent)</li><br>
+                                </ul> 
+                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openParagraph(this);">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <p id="p_educational_background">Educational Background</p>
+                            <div class="is_hidden_false" name="find_hidden">
+
+                                <div>
+                                    <p class="duration">2020-2023</p>
+                                    <p class="study_location">Sona College of Technology, Salem</p>
+                                    <p class="course">B.E Computer Science and Engineering</p>
+                                    <img src="static\images\75_per.png" class="per">
+                                </div>
+                                <div>
+                                    <p class="duration">2017-2020</p>
+                                    <p class="study_location">Thiagarajar Polytechnic college, Salem</p>
+                                    <p class="course">Diploma in Computer Science and Engineering</p>
+                                    <img src="static\images\85_per.png" class="per">
+
+                                </div>
+
+                                <div>
+                                    <p class="duration">2017</p>
+                                    <p class="study_location">Government Higher Secondary school, Cettimangurichi, Salem</p>
+                                    <p class="course">SSLC</p>
+                                    <img src="static\images\82_per.png" class="per">
+
+                                </div>
+                             
+                            
+                            
+
+
+                             
+                            
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+        </main>
+        <footer>
+            <div class="row">
+                    <p>&copy; 2024 Pushparaj.M Portfolio Website. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
     <script src="static/js/scripts.js"></script>
 </body>
+
+<!-- <body>
+
+                            <i class="fa-solid fa-bars"></i>
+
+</body> -->
 
 </html>
