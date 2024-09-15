@@ -1,1 +1,13 @@
-Zip.txt
+1. need to add header like
+profile -> experiance -> project -> stils -> Education
+
+2. resume download
+
+3. image animations
+
+4. gif
+
+5. github and linked in direct link.
+
+6.Skills images.
+
