@@ -49,6 +49,16 @@ am5.ready(function () {
     var root_2 = am5.Root.new("chartdiv_2");
     var root_3 = am5.Root.new("chartdiv_3");
 
+    var exporting_1 = am5plugins_exporting.Exporting.new(root_1, {
+        menu: am5plugins_exporting.ExportingMenu.new(root_1, {})
+    });
+    var exporting_2 = am5plugins_exporting.Exporting.new(root_2, {
+        menu: am5plugins_exporting.ExportingMenu.new(root_2, {})
+    });
+    var exporting_3 = am5plugins_exporting.Exporting.new(root_3, {
+        menu: am5plugins_exporting.ExportingMenu.new(root_3, {})
+    });
+
     root_1.setThemes([
         am5themes_Animated.new(root_1)
     ]);

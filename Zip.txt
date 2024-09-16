@@ -7,4 +7,4 @@ profile -> experiance -> project -> stils -> Education
 
 5. github and linked in direct link.
 
-7. AM Charts integration
+7. AM Charts download option integration
