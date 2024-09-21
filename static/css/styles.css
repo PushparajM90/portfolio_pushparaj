@@ -2,36 +2,8 @@
     position: fixed;
     background-color: #ffffff;
     width: 103%;
-    height: 55px;
+    height: 72px;
     z-index: 5;
-}
-
-#header_button_nav{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-button{
-    background-image: linear-gradient(to bottom, #696969 0, #ffffff 70%) !important;
-    border-radius: 4px !important;
-    background-position: 0 !important;
-    font-weight: bold !important;
-    color: #5f5f5f !important;
-}
-
-#fa_class_li_list{
-    color: #5f5f5f;
-    background-image: linear-gradient(to bottom, #696969 0, #ffffff 70%);
-    display: flex;
-    justify-content: space-evenly;
-    padding: 3px 12px 3px 12px;
-    border-radius: 20px;
-    border: 1px solid #d3d3d3;
-    margin: 9px;
-}
-
-#fa_class_li_list i{
-    margin: 0px 10px 0px 10px;
 }
 
 .progress-container {
@@ -44,14 +16,50 @@ button{
     z-index: 100;
 }
 
-button:hover, i:hover, #mobile_no:hover, #email_id:hover{
-    color: #0066ff !important;
-}
-
 .progress-bar {
     height: 5px;
     background: linear-gradient(to right, #02ff41, #33ffb1, #aeffff);
     width: 0%;
+}
+
+button:hover, i:hover, #mobile_no:hover, #email_id:hover{
+    color: #0066ff !important;
+}
+
+header nav ul {
+    position: fixed;
+    top: 15px;
+    right: 12px;
+}
+        
+header nav ul li {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    color: #333;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border: 2px solid #333;
+    margin-right: 10px;
+}
+
+header nav ul li:hover {
+    background-color: #6da6fc;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+}
+
+.highlight_li_true {
+    background-color: #0066ff;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+}
+
+header nav ul li:hover i,
+.btn:hover i{
+    color: white !important;
 }
 
 #pushparaj_developer_cover{
@@ -80,7 +88,7 @@ button:hover, i:hover, #mobile_no:hover, #email_id:hover{
 }
 
 #detail_containar{
-    margin-top: -230px;
+    margin-top: -260px;
 }
 
 a {
@@ -119,7 +127,7 @@ footer {
     text-align: justify;
 }
 
-#p_profile, #p_work_experience, #p_projects, #p_skills, #p_educational_background{
+#p_profile, #p_work_experience, #p_projects, #p_skills, #p_educational_background, #p_contact{
     color: #0066ff;
     font-weight: bold;
     font-size: 24px;
@@ -194,6 +202,7 @@ p, li{
     color: #1d1c1c;
     text-align: left;
     margin-left: 30px;
+    margin-top: 30px;
 }
 
 .p_back_end, .p_front_end, .p_tools_sofware, .p_soft_skills, .p_languages{

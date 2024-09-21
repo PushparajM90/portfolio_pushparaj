@@ -25,12 +25,12 @@
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/plugins/exporting.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
 </head>
 
 <body>
     <div class="row all_div-container">
-        <!-- <header id='portfolio-header' class="center">
+        <header>
             <div class="row">
                 <div class="col s12 header_class_div">
 
@@ -38,42 +38,50 @@
                         <div class="progress-bar" id="progressBar"></div>
                     </div>
 
-                    <nav id="header_nav">
-                        <div class="row" style="margin-top: 12px;">
-                            <div class="col-md-4" id="header_button_nav">
-                                <button type="button" class="btn btn-default fw-bold" onclick="applySelectedColor(this);">
-                                    <i class="fa-solid fa-house" name='fa-solid_fa-house'></i> &nbsp;Home
-                                </button>
-
-                                <button type="button" class="btn btn-default fw-bold" onclick="applySelectedColor(this);">
-                                    <i class="fa-solid fa-user" name='fa-solid_fa-user'></i>&nbsp;About
-                                </button>
-
-                                <button type="button" class="btn btn-default fw-bold" onclick="applySelectedColor(this);">
-                                    <i class="fas fa-phone" name="fas_fa-phone"></i>&nbsp;Contact
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="row" style="margin-top: 12px;">
-                            <div class="col-md-2">
-                                <span id='fa_class_li_list'>
-                                    <i class="fa-solid fa-house" name='fa-solid_fa-house'></i>
-                                    <i class="fa-solid fa-user" name='fa-solid_fa-user'></i>
-                                    <i class="fas fa-phone" name="fas_fa-phone"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </nav>
+                    <div class="row">
+                        <nav>
+                            <ul>
+                                <li class="highlight_li_true" id="home_btn_li" onclick="movePage('home');">
+                                    <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+                                </li>
+                                <li class ="" id="p_profile_btn_li" onclick="movePage('p_profile');">
+                                    <i class="fa-solid fa-user" aria-hidden="true"></i> Profile
+                                </li>
+                                <li class ="" id="p_work_experience_btn_li" onclick="movePage('p_work_experience');">
+                                    <i class="fa-solid fa-swatchbook" aria-hidden="true"></i> Experience
+                                </li>
+                                <li class ="" id="p_projects_btn_li" onclick="movePage('p_projects');">
+                                    <i class="fa-solid fa-toolbox" aria-hidden="true"></i> Projects
+                                </li>
+                                <li class ="" id="p_skills_btn_li" onclick="movePage('p_skills');">
+                                    <i class="fa-solid fa-book" aria-hidden="true"></i> Skills
+                                </li>
+                                <li class ="" id="p_educational_background_btn_li" onclick="movePage('p_educational_background');">
+                                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education
+                                </li>
+                                <li class ="" id="p_contact_btn_li" onclick="movePage('p_contact');">
+                                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
 
                 </div>
             </div>
-        </header> -->
+        </header>
         <main>
 
             <img src="static\images\cover_c_2_4.png" id="pushparaj_developer_cover">
-
             <div class="row" id="detail_containar">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <a href="static/images/Pushparaj_Murugesan.pdf" download="Pushparaj_Murugesan_Resume.pdf"
+                            class="btn btn-primary mt-3">
+                            Download Resume &nbsp; <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-6">
@@ -110,7 +118,7 @@
                 </div>
             </div>
 
-            <div class="container mt-5 bottem_content">
+            <div class="container bottem_content">
                 <!-- Profile Section -->
                 <div class="card">
                     <div class="row text-center">
@@ -504,6 +512,55 @@
                                     <div id="chartdiv_3"></div>
                                     <span class="chartdiv_span"> chartdiv_span </span>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <p id="p_contact" onclick="openParagraph(this);">Contact</p>
+                            <div class="is_hidden_false" name="find_hidden">
+                
+                                <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-6">
+                                        <p>+91 9080209633</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-6">
+                                        <p>pushparaj-fullstack-dev@outlook.com</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-6">
+                                        <p>Git  Hub</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-6">
+                                        <p>Linked In</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <form name="feedback" method="POST" data-netlify="true">
+                                        <label for="name">Name:</label>
+                                        <input type="text" id="name" name="name" required>
+                                    
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" name="email" required>
+                                    
+                                        <label for="message">Message:</label>
+                                        <textarea id="message" name="message" required></textarea>
+                                    
+                                        <button type="submit">Send Feedback</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

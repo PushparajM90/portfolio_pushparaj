@@ -1,10 +1,6 @@
 1. need to add header like
 profile -> experiance -> project -> stils -> Education
 
-2. resume update & resume download option in site
-
 4. gif
 
 5. github and linked in direct link.
-
-7. AM Charts download option integration

@@ -1,21 +1,110 @@
+var last_highlighted_id = "home_btn_li";
+
 document.addEventListener('DOMContentLoaded', function () {
+
+    (function () {
+        emailjs.init("NagH5tRuSAjvWj56m");
+    })();
+
+    document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        emailjs.send("service_1ktrui8", "template_ikmroyv", {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        })
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Feedback sent successfully!');
+            }, function (error) {
+                console.log('FAILED...', error);
+                alert('Failed to send feedback. Please try again.');
+            });
+    });
 
     window.onscroll = function () {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (winScroll / height) * 100;
+        console.log("scrolled-->", scrolled);
         document.getElementById("progressBar").style.width = scrolled + "%";
+        
+        var p_profile_Element = document.getElementById('p_profile');
+        var p_work_experience_Element = document.getElementById('p_work_experience');
+        var p_projects_Element = document.getElementById('p_projects');
+        var p_skills_Element = document.getElementById('p_skills');
+        var p_educational_background_Element = document.getElementById('p_educational_background');
+        var p_contact_Element = document.getElementById('p_contact');
+        
+        var rect_profile = p_profile_Element.getBoundingClientRect();
+        var rect_experience = p_work_experience_Element.getBoundingClientRect();
+        var rect_projects = p_projects_Element.getBoundingClientRect();
+        var rect_skills = p_skills_Element.getBoundingClientRect();
+        var rect_educational = p_educational_background_Element.getBoundingClientRect();
+        var rect_contact = p_contact_Element.getBoundingClientRect();
+        
+        if (scrolled < 5) {
+            setHighlightLiTrueClass('home_btn_li');
+        }
+        else if (rect_profile.top >= 0 && rect_profile.bottom <= window.innerHeight) {
+            setHighlightLiTrueClass('p_profile_btn_li');
+        }
+        else if (rect_experience.top >= 0 && rect_experience.bottom <= window.innerHeight) {
+            setHighlightLiTrueClass('p_work_experience_btn_li');
+        }
+        else if (rect_projects.top >= 0 && rect_projects.bottom <= window.innerHeight) {
+            setHighlightLiTrueClass('p_projects_btn_li');
+        }
+        else if (rect_skills.top >= 0 && rect_skills.bottom <= window.innerHeight) {
+            setHighlightLiTrueClass('p_skills_btn_li');
+        }
+        else if (rect_educational.top >= 0 && rect_educational.bottom <= window.innerHeight) {
+            setHighlightLiTrueClass('p_educational_background_btn_li');
+        }
+        else if (rect_contact.top >= 0 && rect_contact.bottom <= window.innerHeight) {
+            setHighlightLiTrueClass('p_contact_btn_li');
+        }
+        
     };
 });
 
+function setHighlightLiTrueClass(id){
+    var ele = document.getElementById(id);
+    var hasClass = ele.classList.contains('highlight_li_true');
+    if (!hasClass) {
+        ele.classList.add('highlight_li_true');
+        var existing_highlighted = document.getElementById(last_highlighted_id);
+        existing_highlighted.classList.remove('highlight_li_true');
+        last_highlighted_id = id;
+    }
+}
+
+function movePage(id) {
+    if (id == 'home') {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        var element = document.getElementById(id);
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+        setTimeout(function () {
+            window.scrollBy({
+                top: -80,
+                behavior: 'smooth'
+            });
+        }, 900);
+    }
+}
+
 function openParagraph(element) {
-    console.log(element);
     var div = element.nextElementSibling;
-    console.log("div--->", div);
     if (div) {
         var classList = div.classList;
-        console.log(classList);
-
         if (classList.contains('is_hidden_true')) {
             classList.add('is_hidden_false');
             classList.remove('is_hidden_true');
