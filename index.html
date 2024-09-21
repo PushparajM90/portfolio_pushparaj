@@ -559,6 +559,14 @@
                                         <input placeholder="example@gmail.com" type="email" id="recipient_from_email" name="recipient_from_email" required>
                                     
                                         <label for="message">Message:</label>
+                                        <span>Click the emojis to see the popular feedback!</span>
+                                        <div class="row defailt_emoji_email_content">
+                                            <i onclick="setDefaultMessage(this);" id="thumbs_up" class="fa-solid fa-thumbs-up"></i>
+                                            <i onclick="setDefaultMessage(this);" id="heart" class="fa-solid fa-face-grin-squint-tears"></i>
+                                            <i onclick="setDefaultMessage(this);" id="squint_tears" class="fa-solid fa-face-smile-beam"></i>
+                                            <i onclick="setDefaultMessage(this);" id="face_angry" class="fa-solid fa-face-angry"></i>
+                                            <i onclick="setDefaultMessage(this);" id="thumbs_down" class="fa-solid fa-thumbs-down"></i>
+                                        </div>
                                         <textarea placeholder="Your message may make my day better." id="end_user_message" name="end_user_message" required></textarea>
 
                                         <button type="submit"> <i class="fa-solid fa-envelope"></i> Send Mail</button>

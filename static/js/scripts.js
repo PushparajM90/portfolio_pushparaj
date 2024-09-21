@@ -1,5 +1,11 @@
 var last_highlighted_id = "home_btn_li";
-
+var emoji_response = {
+    thumbs_up: "👍🏻👍🏻👍🏻 I really enjoyed this! Everything was great, and I appreciate the effort put into it. Keep up the fantastic work! 👍🏻👍🏻👍🏻",
+    heart: "🤣🤣🤣 I absolutely love this! It exceeded my expectations, and I'm so grateful for the amazing experience! 🤣🤣🤣",
+    squint_tears: "😀😀😀 This was so much fun! I really enjoyed the experience and had a great time. Keep the good vibes coming! 😀😀😀",
+    face_angry: "😡😡😡 I'm really frustrated with my experience. It didn't meet my expectations, and I hope you address the problems I faced. 😡😡😡",
+    thumbs_down: "👎🏻👎🏻👎🏻 I didn't enjoy this at all. I found several issues that need improvement. I hope you can make it better! 👎🏻👎🏻👎🏻",
+}
 document.addEventListener('DOMContentLoaded', function () {
 
     (function () {
@@ -91,6 +97,17 @@ document.addEventListener('DOMContentLoaded', function () {
         
     };
 });
+
+function setDefaultMessage(ele){
+    var ele_id = ele.id;
+    var message = emoji_response[ele_id];
+    if (ele_id == 'heart') {
+
+    }
+    var textarea = document.getElementById("end_user_message");
+    textarea.value = '';
+    textarea.value = message;
+}
 
 function setHighlightLiTrueClass(id){
     var ele = document.getElementById(id);
