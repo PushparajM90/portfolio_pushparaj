@@ -9,11 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
     })();
 
     document.getElementById('feedbackForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault();
+        var recipient_from_name_ele = document.getElementById('recipient_from_name');
+        var recipient_from_email_ele = document.getElementById('recipient_from_email');
+        var end_user_message_ele = document.getElementById('end_user_message');
         emailjs.send("service_1ktrui8", "template_ikmroyv", {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
+            name: recipient_from_name_ele.value,
+            email: recipient_from_email_ele.value,
+            message: end_user_message_ele.value
         })
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
@@ -23,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     icon: "success",
                     button: "Okay",
                 }).then((willForgive) => {
-                    $('#name').val('');
-                    $('#email').val('');
-                    $('#message').val('');
+                    recipient_from_name_ele.value = '';
+                    recipient_from_email_ele.value = '';
+                    end_user_message_ele.value = '';
                 });
             }, function (error) {
                 console.log('FAILED...', error);
