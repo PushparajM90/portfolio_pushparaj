@@ -3,12 +3,13 @@ var last_highlighted_id = "home_btn_li";
 document.addEventListener('DOMContentLoaded', function () {
 
     (function () {
-        emailjs.init("NagH5tRuSAjvWj56m");
+        emailjs.init({
+            publicKey: "NagH5tRuSAjvWj56m",
+        });
     })();
 
     document.getElementById('feedbackForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
-
         emailjs.send("service_1ktrui8", "template_ikmroyv", {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
@@ -16,10 +17,26 @@ document.addEventListener('DOMContentLoaded', function () {
         })
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
-                alert('Feedback sent successfully!');
+                swal({
+                    title: "Thanking You!",
+                    text: "Thank you so much for taking the time to share your feedback with me! I truly appreciate your effort.",
+                    icon: "success",
+                    button: "Okay",
+                });
             }, function (error) {
                 console.log('FAILED...', error);
-                alert('Failed to send feedback. Please try again.');
+                swal({
+                    title: "Sorry!",
+                    text: "Thank you so much for taking the time to share your feedback with me! Unfortunately, the server encountered an error while trying to send the email.",
+                    icon: "error",
+                    buttons: ["Hate it", "Forgive"],
+                }).then((willForgive) => {
+                    if (willForgive) {
+                        alert("Thank you for your understanding.");
+                    } else {
+                        alert("We're sorry for the disappointment.");
+                    }
+                });
             });
     });
 
@@ -27,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (winScroll / height) * 100;
-        console.log("scrolled-->", scrolled);
         document.getElementById("progressBar").style.width = scrolled + "%";
         
         var p_profile_Element = document.getElementById('p_profile');

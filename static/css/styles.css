@@ -358,3 +358,71 @@ p, li{
     padding: 20px;
     color: white;
 }
+
+#feedbackForm {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+#feedbackForm:hover {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#feedbackForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#feedbackForm input[type="text"],
+#feedbackForm input[type="email"],
+#feedbackForm textarea{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+}
+#feedbackForm textarea {
+    height: 112px;
+}
+
+#feedbackForm input[type="text"]:focus,
+#feedbackForm input[type="email"]:focus,
+#feedbackForm textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#feedbackForm button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    color: #333;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border: 2px solid #333;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#feedbackForm button:hover {
+    background-color: #0066ff;
+    transition: background-color 0.3s ease;
+    color: #ffffff !important;
+}
+
+@media (max-width: 500px) {
+    #feedbackForm {
+        padding: 15px;
+        max-width: 100%;
+    }
+}
