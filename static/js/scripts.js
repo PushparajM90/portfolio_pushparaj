@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: "Thank you so much for taking the time to share your feedback with me! I truly appreciate your effort.",
                     icon: "success",
                     button: "Okay",
+                }).then((willForgive) => {
+                    $('#name').val('');
+                    $('#email').val('');
+                    $('#message').val('');
                 });
             }, function (error) {
                 console.log('FAILED...', error);
