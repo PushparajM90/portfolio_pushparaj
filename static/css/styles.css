@@ -1,6 +1,6 @@
 .header_class_div{
     position: fixed;
-    background-color: #ffffff;
+    background-color: #343a40;
     width: 103%;
     height: 72px;
     z-index: 5;
@@ -8,18 +8,19 @@
 
 .progress-container {
     width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
     height: 5px;
-    background: #f3f3f3;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
 }
 
 .progress-bar {
-    height: 5px;
-    background: linear-gradient(to right, #02ff41, #33ffb1, #aeffff);
+    height: 100%;
     width: 0%;
+    background: linear-gradient(to right, #0004ff, #01ccff) !important;
+    /* background: linear-gradient(to right, #343a40, #0066ff ) !important; */
+    border-radius: 25px;
+    transition: width 0.5s ease-in-out;
 }
 
 button:hover, i:hover, #mobile_no:hover, #email_id:hover{
@@ -67,6 +68,7 @@ header nav ul li:hover i,
     height: 100%;
     object-fit: cover;
     object-position: top;
+    margin-top: 72px;
 }
     
 #pushparaj, #mobile_no, #email_id, #fullstack{
@@ -100,11 +102,12 @@ a:hover {
 }
 
 footer {
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 20px;
     background-color: #343a40;
     color: white;
     text-align: center;
+    height: 55px;
 }
 
 .card {
@@ -430,4 +433,53 @@ p, li{
 .defailt_emoji_email_content i{
     font-size: 20px;
     padding: 12px;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+#preloader .spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid rgba(0, 0, 0, 0.1);
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#preloader p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.skill_li_p{
+    text-align: left;
+}
+
+.skill_li_i{
+    margin-top: 3px;
+    text-align: center;
 }

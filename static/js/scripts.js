@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('feedbackForm').addEventListener('submit', function (event) {
         event.preventDefault();
+        var preloader_ele = document.getElementById('preloader');
+        preloader_ele.style.display = 'block';
         var recipient_from_name_ele = document.getElementById('recipient_from_name');
         var recipient_from_email_ele = document.getElementById('recipient_from_email');
         var end_user_message_ele = document.getElementById('end_user_message');
@@ -24,17 +26,18 @@ document.addEventListener('DOMContentLoaded', function () {
             email: recipient_from_email_ele.value,
             message: end_user_message_ele.value
         })
-            .then(function (response) {
+        //dummyLog()
+        .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
+                recipient_from_name_ele.value = '';
+                recipient_from_email_ele.value = '';
+                end_user_message_ele.value = '';
+                preloader_ele.style.display = 'none';
                 swal({
                     title: "Thanking You!",
                     text: "Thank you so much for taking the time to share your feedback with me! I truly appreciate your effort.",
                     icon: "success",
                     button: "Okay",
-                }).then((willForgive) => {
-                    recipient_from_name_ele.value = '';
-                    recipient_from_email_ele.value = '';
-                    end_user_message_ele.value = '';
                 });
             }, function (error) {
                 console.log('FAILED...', error);
@@ -98,6 +101,15 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 });
 
+function dummyLog(){
+    return new Promise(function (resolve) {
+        setTimeout(function () {
+            console.log("Hi Bro");
+            resolve(true);
+        }, 3000);
+    });
+}
+
 function setDefaultMessage(ele){
     var ele_id = ele.id;
     var message = emoji_response[ele_id];
@@ -107,6 +119,8 @@ function setDefaultMessage(ele){
     var textarea = document.getElementById("end_user_message");
     textarea.value = '';
     textarea.value = message;
+    var emoji_feedback_guid_ele = document.getElementById("emoji_feedback_guid");
+    emoji_feedback_guid_ele.hidden = true;
 }
 
 function setHighlightLiTrueClass(id){
