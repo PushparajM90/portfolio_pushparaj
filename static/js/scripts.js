@@ -6,6 +6,17 @@ var emoji_response = {
     face_angry: "😡😡😡 I'm really frustrated with my experience. It didn't meet my expectations, and I hope you address the problems I faced. 😡😡😡",
     thumbs_down: "👎🏻👎🏻👎🏻 I didn't enjoy this at all. I found several issues that need improvement. I hope you can make it better! 👎🏻👎🏻👎🏻",
 }
+var contact_json = {
+    email_icon: "pushparaj-fullstack-dev@outlook.com",
+    number_icon: "9080209633",
+    whatsapp_icon: "9080209633",
+    linkedin_icon: "https://www.linkedin.com/in/pushparaj-m-43148817a/",
+    github_icon: "https://github.com/PushparajM90",
+    facebook_icon: "https://www.facebook.com/pistal.king.5?mibextid=ZbWKwL",
+    instagram_icon: "https://www.instagram.com/black__devil_raj?igsh=ZmliOXVtcDZ3MDN2",
+    youtube_icon: "https://youtube.com/@pushparajmurugesan8639?si=LA3Ja_qkJ688I7mj"
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
     (function () {
@@ -17,41 +28,90 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('feedbackForm').addEventListener('submit', function (event) {
         event.preventDefault();
         var preloader_ele = document.getElementById('preloader');
-        preloader_ele.style.display = 'block';
+        preloader_ele.style.display = 'flex';
         var recipient_from_name_ele = document.getElementById('recipient_from_name');
         var recipient_from_email_ele = document.getElementById('recipient_from_email');
         var end_user_message_ele = document.getElementById('end_user_message');
         emailjs.send("service_1ktrui8", "template_ikmroyv", {
-            name: recipient_from_name_ele.value,
-            email: recipient_from_email_ele.value,
-            message: end_user_message_ele.value
+           name: recipient_from_name_ele.value,
+           email: recipient_from_email_ele.value,
+           message: end_user_message_ele.value
         })
-        //dummyLog()
-        .then(function (response) {
+        // dummyLog()
+        .then(
+            function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 recipient_from_name_ele.value = '';
                 recipient_from_email_ele.value = '';
                 end_user_message_ele.value = '';
                 preloader_ele.style.display = 'none';
-                swal({
+                Swal.fire({
                     title: "Thanking You!",
                     text: "Thank you so much for taking the time to share your feedback with me! I truly appreciate your effort.",
                     icon: "success",
                     button: "Okay",
+                    color: "#000000",
+                    iconColor: '#68ff89',
+                    background: 'linear-gradient(135deg, #0077ff, #00d2ff)',
+                    iconColor: '#ffffff',
+                    customClass: {
+                        popup: 'styled-popup',
+                    },
+                    backdrop: `
+                        rgba(255, 255, 255, 0.8)
+                    `
                 });
-            }, function (error) {
+            }, 
+            function (error) {
                 console.log('FAILED...', error);
-                swal({
+                recipient_from_name_ele.value = '';
+                recipient_from_email_ele.value = '';
+                end_user_message_ele.value = '';
+                preloader_ele.style.display = 'none';
+                Swal.fire({
                     title: "Sorry!",
                     text: "Thank you so much for taking the time to share your feedback with me! Unfortunately, the server encountered an error while trying to send the email.",
                     icon: "error",
-                    buttons: ["Hate it", "Forgive"],
-                }).then((willForgive) => {
-                    if (willForgive) {
-                        alert("Thank you for your understanding.");
-                    } else {
-                        alert("We're sorry for the disappointment.");
+                    color: "#000000",
+                    background: 'linear-gradient(135deg, #0077ff, #00d2ff)',
+                    iconColor: '#ff6868',
+                    customClass: {
+                        popup: 'styled-popup',
+                    },
+                    backdrop: `
+                    rgba(255, 255, 255, 0.8)
+                    `,
+                    showCancelButton: true,
+                    confirmButtonText: 'Forgive',
+                    cancelButtonText: 'Hate it' 
+                }).then((result) => {
+                    var title = 'Sorry 😢!';
+                    var text = "We're sorry for the disappointment.";
+                    var image_url = '/static/images/have_it.png';
+                    if (result.isConfirmed) {
+                        title = 'Oops 😢!';
+                        text = 'Thank you for your understanding.';
+                        image_url = '/static/images/forgive_image.png';
                     }
+                    Swal.fire({
+                        title: title,
+                        text: text,
+                        imageUrl: image_url,
+                        imageWidth: 200,
+                        imageHeight: 200,
+                        imageAlt: "Custom image",
+                        color: "#000000",
+                        background: 'linear-gradient(135deg, #0077ff, #00d2ff)',
+                        iconColor: '#ffffff',
+                        timer: 3000,
+                        timerProgressBar: true,
+                        customClass: {
+                            popup: 'styled-popup',
+                        },
+                        backdrop: `
+                                rgba(255, 255, 255, 0.8)
+                            `
+                    });
                 });
             });
     });
@@ -100,6 +160,28 @@ document.addEventListener('DOMContentLoaded', function () {
         
     };
 });
+
+const iconDivs = document.querySelectorAll('.icon_div');
+
+iconDivs.forEach(function (iconDiv) {
+    iconDiv.addEventListener('mouseover', function (event) {
+        var div_ele = event.currentTarget;
+        var i_two = div_ele.querySelector('.icon_ii');
+        i_two.hidden = false
+    });
+    iconDiv.addEventListener('mouseout', function (event) {
+        var div_ele = event.currentTarget;
+        var i_two = div_ele.querySelector('.icon_ii');
+        i_two.hidden = true
+    });
+});
+
+function getContectLink(element){
+    var element_id = element.id;
+    var link = contact_json[element_id];
+    console.log("link--->", link);
+    copyToClipboard(link, element_id);
+}
 
 function dummyLog(){
     return new Promise(function (resolve) {
@@ -171,11 +253,14 @@ function openParagraph(element) {
     }
 }
 
-function copyToClipboard() {
+function copyHardcodedToClipboard() {
     var phoneNumber = document.getElementById("mobile_no").innerText.trim();
+    copyToClipboard(phoneNumber, 'mobile_no');
+}
 
+function copyToClipboard(content, id) {
     var tempInput = document.createElement("textarea");
-    tempInput.value = phoneNumber;
+    tempInput.value = content;
     document.body.appendChild(tempInput);
 
     tempInput.select();
@@ -183,7 +268,53 @@ function copyToClipboard() {
 
     document.body.removeChild(tempInput);
 
-    alert("Phone number copied to clipboard: " + phoneNumber);
+    var swal_title = `<span style="color: #ffffff;">`;
+    if (id == 'mobile_no'){
+        swal_title += `Mobile number :`
+    }
+    else if (id == 'email_icon') {
+        swal_title += `Email ID :`
+    }
+    else if (id == 'number_icon') {
+        swal_title += `Mobile number :`
+    }
+    else if (id == 'whatsapp_icon') {
+        swal_title += `Whatsapp number :`
+    }
+    else if (id == 'linkedin_icon') {
+        swal_title += `Linkedin Profile URL :`
+    }
+    else if (id == 'github_icon') {
+        swal_title += `Github Profile URL :`
+    }
+    else if (id == 'facebook_icon') {
+        swal_title += `Facebook Profile URL :`
+    }
+    else if (id == 'instagram_icon') {
+        swal_title += `Instagram Profile URL :`
+    }
+    else if (id == 'youtube_icon') {
+        swal_title += `Youtube Profile URL :`
+    }
+    else{
+        swal_title += `Content :`
+    }
+    swal_title += ` <span style="font-size:12px; color:#333;"> ${content}</span> copied to clipboard!</span>`;
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: swal_title,
+        background: 'linear-gradient(135deg, #0077ff, #00d2ff)',
+        iconColor: '#68ff89',
+        customClass: {
+            popup: 'styled-popup',
+        },
+        showConfirmButton: false,
+        timer: 3000,
+        toast: true,
+        timerProgressBar: true,
+    });
+
 }
 
 am5.ready(function () {

@@ -483,3 +483,44 @@ p, li{
     margin-top: 3px;
     text-align: center;
 }
+
+.left{
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+}
+
+.right {
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+}
+
+.contact_me_content .icon_i,
+.contact_me_content .icon_ii{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contact_me_content .icon_div {
+    display: flex;
+    transition: transform 0.3s ease;
+    padding: 15px !important;
+}
+
+.contact_me_content .icon_div p {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.contact_me_content .icon_div:hover p{
+    transform: scale(1.1);
+    margin-left: 20px;
+    transition: margin-left 0.3s ease;
+    border: 1px solid #333;
+    border-radius: 7px;
+}
+
+.contact_me_content .icon_ii {
+    margin-left: 20px;
+}

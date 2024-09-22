@@ -1,3 +1,16 @@
-1. gradient color for progressbar
 2. gif
+
 3. github and linked in direct link.
+<i class="fa-solid fa-envelope"></i>
+<i class="fa-solid fa-phone"></i>
+<i class="fa-brands fa-whatsapp"></i>
+<i class="fa-brands fa-linkedin"></i>
+<i class="fa-brands fa-github"></i>
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-youtube"></i>
+
+<i class="fa-solid fa-paper-plane"></i>
+<i class="fa-regular fa-copy"></i>
+
+<i class="fa-solid fa-up-right-from-square"></i>

@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Pushparaj's Portfolio">
+    <meta property="og:description"
+        content="Welcome to my personal portfolio. Learn more about my skills, projects, and experience.">
+    <meta property="og:image" content="https://pushparajm90.github.io/static/images/cover_profile.png">
+    <meta property="og:url" content="https://pushparajm90.github.io/portfolio_pushparaj/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon.png">
+    <link rel="apple-touch-icon" href="static/images/favicon.png">
     <title>Pushparaj Portfolio</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -21,8 +29,7 @@
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/plugins/exporting.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -102,7 +109,7 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-6">
-                        <h4 id="mobile_no" onclick="copyToClipboard()">
+                        <h4 id="mobile_no" onclick="copyHardcodedToClipboard()">
                             <i class="fa-solid fa-phone"></i> +91 9080209633
                         </h4>
                     </div>
@@ -523,53 +530,97 @@
                         <div class="col-md-12">
                             <p id="p_contact" onclick="openParagraph(this);">Contact</p>
                             <div class="is_hidden_false" name="find_hidden">
-                
-                                <!-- <div class="row">
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-6">
-                                        <p>+91 9080209633</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-6">
-                                        <p>pushparaj-fullstack-dev@outlook.com</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-6">
-                                        <p>Git  Hub</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-6">
-                                        <p>Linked In</p>
-                                    </div>
-                                </div> -->
-                                <div class="row">
-                                    <form id="feedbackForm">
-                                        <label for="name">Name:</label>
-                                        <input placeholder="Your Sweet Name" type="text" id="recipient_from_name" name="recipient_from_name" required>
-                                    
-                                        <label for="email">Email:</label>
-                                        <input placeholder="example@gmail.com" type="email" id="recipient_from_email" name="recipient_from_email" required>
-                                    
-                                        <label for="message">Message:</label>
-                                        <span id="emoji_feedback_guid">Click the emojis to see the popular feedback!</span>
-                                        <div class="row defailt_emoji_email_content">
-                                            <i onclick="setDefaultMessage(this);" id="thumbs_up" class="fa-solid fa-thumbs-up"></i>
-                                            <i onclick="setDefaultMessage(this);" id="heart" class="fa-solid fa-face-grin-squint-tears"></i>
-                                            <i onclick="setDefaultMessage(this);" id="squint_tears" class="fa-solid fa-face-smile-beam"></i>
-                                            <i onclick="setDefaultMessage(this);" id="face_angry" class="fa-solid fa-face-angry"></i>
-                                            <i onclick="setDefaultMessage(this);" id="thumbs_down" class="fa-solid fa-thumbs-down"></i>
-                                        </div>
-                                        <textarea placeholder="Your message may make my day better." id="end_user_message" name="end_user_message" required></textarea>
 
-                                        <button type="submit"> <i class="fa-solid fa-envelope"></i> Send Mail</button>
-                                    </form>
+                                <div class="container"></div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <form id="feedbackForm">
+                                                <label for="name">Name:</label>
+                                                <input placeholder="Your Sweet Name" type="text" id="recipient_from_name" name="recipient_from_name" required>
+                                                
+                                                <label for="email">Email:</label>
+                                                <input placeholder="example@gmail.com" type="email" id="recipient_from_email" name="recipient_from_email" required>
+                                                
+                                                <label for="message">Message:</label>
+                                                <span id="emoji_feedback_guid">Click the emojis to see the popular feedback!</span>
+                                                <div class="row defailt_emoji_email_content">
+                                                    <i onclick="setDefaultMessage(this);" id="thumbs_up" class="fa-solid fa-thumbs-up"></i>
+                                                    <i onclick="setDefaultMessage(this);" id="heart" class="fa-solid fa-face-grin-squint-tears"></i>
+                                                    <i onclick="setDefaultMessage(this);" id="squint_tears" class="fa-solid fa-face-smile-beam"></i>
+                                                    <i onclick="setDefaultMessage(this);" id="face_angry" class="fa-solid fa-face-angry"></i>
+                                                    <i onclick="setDefaultMessage(this);" id="thumbs_down" class="fa-solid fa-thumbs-down"></i>
+                                                </div>
+                                                <textarea placeholder="Your message may make my day better." id="end_user_message" name="end_user_message"
+                                                    required></textarea>
+                                                
+                                                <button type="submit"> <i class="fa-solid fa-envelope"></i> Send Mail</button>
+                                            </form>
+                                        </div>
+                                
+                                        <div class="col-md-6">
+                                            <div class="p-4 bg-light border rounded contact_me_content">
+                                                <p style="font-weight: bold;">Contact through</p>
+                                                <div class="row left icon_div">
+                                                    <i title="Open" class="fa-solid fa-envelope icon_i">
+                                                    </i>
+                                                    <p>Email</p>
+                                                    <i onclick="getContectLink(this);" title="Copy" id="email_icon" class="fa-regular fa-copy icon_ii" hidden>
+                                                    </i>
+                                                </div>
+                                                <div class="row left icon_div">
+                                                    <i title="Open" class="fa-brands fa-linkedin icon_i">
+                                                    </i>
+                                                    <p>Linkedin</p>
+                                                    <i onclick="getContectLink(this);" title="Copy" id="linkedin_icon" class="fa-regular fa-copy icon_ii" hidden>
+                                                    </i>
+                                                </div>
+                                                <div class="row left icon_div">
+                                                    <i title="Open" class="fa-solid fa-phone icon_i">
+                                                    </i>
+                                                    <p>Mobile Number</p>
+                                                    <i onclick="getContectLink(this);" title="Copy" id="number_icon" class="fa-regular fa-copy icon_ii" hidden>
+                                                    </i>
+                                                </div>
+                                                <div class="row left icon_div">
+                                                    <i title="Open" class="fa-brands fa-whatsapp icon_i">
+                                                    </i>
+                                                    <p>Whatsapp</p>
+                                                    <i onclick="getContectLink(this);" title="Copy" id="whatsapp_icon" class="fa-regular fa-copy icon_ii" hidden>
+                                                    </i>
+                                                </div>
+                                                <div class="row left icon_div">
+                                                    <i title="Open" class="fa-brands fa-github icon_i">
+                                                    </i>
+                                                    <p>Github</p>
+                                                    <i onclick="getContectLink(this);" title="Copy" id="github_icon" class="fa-regular fa-copy icon_ii" hidden>
+                                                    </i>
+                                                </div>
+                                                <div class="row left icon_div">
+                                                    <i title="Open" class="fa-brands fa-facebook icon_i">
+                                                    </i>
+                                                    <p>Facebook</p>
+                                                    <i onclick="getContectLink(this);" title="Copy" id="facebook_icon" class="fa-regular fa-copy icon_ii" hidden>
+                                                    </i>
+                                                </div>
+                                                <div class="row left icon_div">
+                                                    <i title="Open" class="fa-brands fa-instagram icon_i">
+                                                    </i>
+                                                    <p>Instagram</p>
+                                                    <i onclick="getContectLink(this);" title="Copy" id="instagram_icon" class="fa-regular fa-copy icon_ii" hidden>
+                                                    </i>
+                                                </div>
+                                                <div class="row left icon_div">
+                                                    <i title="Open" class="fa-brands fa-youtube icon_i">
+                                                    </i>
+                                                    <p>Youtube</p>
+                                                    <i onclick="getContectLink(this);" title="Copy" id="youtube_icon" class="fa-regular fa-copy icon_ii" hidden>
+                                                    </i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -586,11 +637,4 @@
     </div>
     <script src="static/js/scripts.js"></script>
 </body>
-
-<!-- <body>
-
-                            <i class="fa-solid fa-bars"></i>
-
-</body> -->
-
 </html>
