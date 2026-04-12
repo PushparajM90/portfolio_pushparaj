@@ -21,17 +21,15 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
         integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/plugins/exporting.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/plugins/exporting.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <body>
     <div class="row all_div-container">
         <header>
@@ -78,53 +76,8 @@
                 <div class="spinner"></div>
                 <p>processing...</p>
             </div>
-            <img src="static\images\cover_c_2_4.png" id="pushparaj_developer_cover">
-            <div class="row" id="detail_containar">
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-6">
-                        <a href="static/images/Pushparaj_Murugesan.pdf" download="Pushparaj_Murugesan_Resume.pdf"
-                            class="btn btn-primary mt-3">
-                            Download Resume &nbsp; <i class="fa-solid fa-download"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-6">
-                        <h4 id="pushparaj">
-                            Pushparaj M
-                        </h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-6">
-                        <h4 id="fullstack">
-                            Full-Stack Developer
-                        </h4>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-6">
-                        <h4 id="mobile_no" onclick="copyHardcodedToClipboard()">
-                            <i class="fa-solid fa-phone"></i> +91 9080209633
-                        </h4>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-6">
-                        <h4 id="email_id" onclick="window.location.href='mailto:pushparaj-fullstack-dev@outlook.com';">
-                            <i class="fa-solid fa-envelope"></i>&nbsp;pushparaj-fullstack-dev@outlook.com
-                        </h4>
-                    </div>
-                </div>
-            </div>
-
+            <img src="static\images\Professional tech developer portfolio design.png" id="pushparaj_developer_cover">
+            
             <div class="container bottem_content">
                 <!-- Profile Section -->
                 <div class="card">
@@ -133,14 +86,7 @@
                             <p id="p_profile" onclick="openParagraph(this);" >Profile</p>
                             <div class="is_hidden_false" name="find_hidden">
                                 <p id="about_me">
-                                    A highly motivated IT professional with over one and a half years of
-                                    experience in IT infrastructure and providing comprehensive technical
-                                    support. Proven expertise in troubleshooting and resolving software
-                                    issues, with a focus on optimizing code performance. Adept at
-                                    collaborating with cross-functional teams to integrate and implement new
-                                    technologies. Seeking a challenging software developer role to apply my
-                                    technical skills in coding, problem-solving, and innovative solutions,
-                                    contributing to the success of a forward-thinking organization.
+                                    Data didn't sync
                                 </p>
                             </div>
                         </div>
@@ -631,7 +577,7 @@
         </main>
         <footer>
             <div class="row">
-                    <p>&copy; 2024 Pushparaj.M Portfolio Website. All rights reserved.</p>
+                    <p id="copy_rights_element"></p>
             </div>
         </footer>
     </div>
